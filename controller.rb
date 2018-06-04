@@ -17,3 +17,15 @@ end
 get '/THE GAME' do
   erb( :game )
 end
+
+get '/RPS/rock' do
+  erb( :rock )
+end
+
+get '/RPS/paper' do
+  erb( :paper )
+end
+
+get '/RPS/scissors' do
+  erb( :scissors )
+end
