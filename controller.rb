@@ -4,4 +4,7 @@ require('pry-byebug')
 require_relative('./models/RPS')
 also_reload('models/*')
 
-get '/RPS/:hand1/:hand2'
+get '/RPS/:hand1/:hand2' do
+  rockpaperscissors = RockPaperScissors.new(params[:hand1], params[:hand2])
+  @rockpaperscissors = rockpaperscissors.game()
+end

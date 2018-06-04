@@ -23,6 +23,11 @@ class TestRockPaperScissors < Minitest::Test
     assert_equal("draw", @rockpaperscissors.game)
   end
 
+  def test_incorrect_entry
+    @rockpaperscissors = RockPaperScissors.new("frog", "bin")
+    assert_equal("this is rock paper scissors, not rock paper random object AWAY WI YE", @rockpaperscissors.game)
+  end
+
   def test_else_hand2_wins
     @rockpaperscissors = RockPaperScissors.new("paper", "scissors")
     assert_equal("scissors wins!", @rockpaperscissors.game)
